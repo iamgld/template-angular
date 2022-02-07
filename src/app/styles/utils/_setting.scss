@@ -1,0 +1,83 @@
+@use 'sass:math';
+
+/*
+  En esta capa estarán:
+    1. configuraciones disponibles globalmente
+    2. cambios de configuraciones
+    3. colores representativos de la marca o empresa
+*/
+
+// Size breakpoints
+$Breakpoints: (
+	// zero
+	zr: 0,
+	// mobile
+	mb: 320px,
+	// landscape
+	ls: 576px,
+	// tablet
+	tb: 768px,
+	// desktop
+	dt: 992px,
+	// extra desktop
+	xd: 1200px
+);
+// Fontsize
+$Fontsize: 16px;
+// Fonts configuration
+$Ratio: 1.25; // ratio
+$TextsizeNormal: $Fontsize; // normal size, 16px
+$TextsizeHeadingThree: $TextsizeNormal * $Ratio; // heading 3, 20px
+$TextsizeHeadingTwo: $TextsizeHeadingThree * $Ratio; // heading 2, 25px
+$TextsizeHeadingOne: $TextsizeHeadingTwo * $Ratio; // heading 1, 31.25px
+$TextsizeSmallOne: math.div($TextsizeNormal, $Ratio); // small 1, 12.8px
+$TextsizeSmallTwo: math.div($TextsizeSmallOne, $Ratio); // small 2, 8.192px
+$Textsize: (
+	Normal: $TextsizeNormal,
+	HeadingThree: $TextsizeHeadingThree,
+	HeadingTwo: $TextsizeHeadingTwo,
+	HeadingOne: $TextsizeHeadingOne,
+	SmallOne: $TextsizeSmallOne,
+	SmallTwo: $TextsizeSmallTwo,
+);
+// Styles of fonts - Change for project
+$Roboto: 'Roboto', sans-serif;
+$Quicksand: 'Quicksand', sans-serif;
+// Line height
+$Lineheight: 1.2;
+// Max width
+$Maxwidth: 1200px;
+// Rounded size for edge and more
+$Rounded: 6px;
+// Size of spaced
+$Spaced: 16px;
+// List of z-index
+$Zindexs: (
+	one: 1000,
+	two: 2000,
+	three: 3000,
+	four: 4000,
+	five: 5000,
+);
+// Colors palette Change for project
+$Palette: (
+	Primary: #531bba,
+	PrimaryLight: #cba0ff,
+	PrimaryDark: #150132,
+	Accent: #ffa800,
+	AccentLight: #ffc500,
+	AccentDark: #bc791c,
+	Warn: #ff3a2d,
+	WarnLight: #fe294c,
+	WarnDark: #a41a31,
+	Success: #1de9b6,
+	SuccessLight: #64ffda,
+	SuccessDark: #00bfa5,
+	Light: #f5f5f5,
+	Dark: #393939,
+	Gray: #b5b5b5,
+	GrayLight: #dbdbdb,
+	GrayDark: #535353,
+	White: #ffffff,
+	Black: #000000,
+);

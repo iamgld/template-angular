@@ -1,4 +1,0 @@
-#!/bin/sh
-. "$(dirname "$0")/_/husky.sh"
-
-echo "[hook pre-commit] Running Eslint..." && yarn lint:fix && git add -A
