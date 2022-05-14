@@ -1,4 +1,4 @@
-// Import Utils
+// Utils Imports
 /*
   1. Piensa en la especificidad
   2. Nunca se añaden estilos para sobre escribir otros
@@ -14,6 +14,3 @@
 @forward './utils/_objects';
 @forward './utils/_components';
 @forward './utils/_trumps';
-
-// Import Pages
-// @import './pages/..';

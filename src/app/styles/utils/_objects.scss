@@ -9,28 +9,6 @@
     3. exclusivamente se usaran selectores de clase
 */
 
-.Icon {
-	&-material {
-		font-size: tools.Textsize(HeadingThree);
-		position: relative;
-		top: 3px;
-
-		&--button {
-			font-size: tools.Textsize(Normal);
-			margin-right: math.div(setting.$Spaced, 3);
-			position: relative;
-			top: 3px;
-		}
-
-		&--button-invert {
-			font-size: setting.$Fontsize * 1.2;
-			margin-left: math.div(setting.$Spaced, 3);
-			position: relative;
-			top: 3px;
-		}
-	}
-}
-
 .Spinner {
 	position: absolute;
 	top: 0;
@@ -40,7 +18,7 @@
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	z-index: tools.Zindex(One);
-	background-color: rgba(tools.Palette(PrimaryDark), 0.5);
+	z-index: tools.zindexs(one);
+	background-color: rgba(tools.colors(primaryDark), 0.5);
 	opacity: 0.5;
 }
