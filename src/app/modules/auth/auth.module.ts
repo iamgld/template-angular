@@ -12,8 +12,11 @@ import { MaterialModule } from '@app/modules'
 
 const components: any[] = []
 
+const exports: any[] = []
+
 @NgModule({
 	declarations: [...components],
 	imports: [CommonModule, AuthRoutingModule, ReactiveFormsModule, MaterialModule],
+	exports: [...exports],
 })
 export class AuthModule {}

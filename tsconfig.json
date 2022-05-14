@@ -21,14 +21,14 @@
 		"lib": ["es2020", "dom"],
 		"paths": {
 			"@app/environment": ["src/environments/environment.ts"],
-			"@app/ngrx/*": ["src/app/state-management/*"],
-			"@app/models": ["src/app/shared/models/index.ts"],
 			"@app/components": ["src/app/shared/components/index.ts"],
 			"@app/services": ["src/app/shared/services/index.ts"],
 			"@app/modules": ["src/app/shared/modules/index.ts"],
+			"@app/models": ["src/app/shared/models/index.ts"],
 			"@app/guards": ["src/app/shared/guards/index.ts"],
 			"@app/pipes": ["src/app/shared/pipes/index.ts"],
-			"@app/directives": ["src/app/shared/directives/index.ts"]
+			"@app/directives": ["src/app/shared/directives/index.ts"],
+			"@app/ngrx/*": ["src/app/state-management/*"]
 		}
 	},
 	"angularCompilerOptions": {

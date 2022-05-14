@@ -1,3 +1,4 @@
+// Angular Imports
 import { Directive, ElementRef, HostListener, Input } from '@angular/core'
 
 @Directive({
@@ -9,8 +10,8 @@ export class ImageBrokenDirective {
 	constructor(private _host: ElementRef) {}
 
 	@HostListener('error') handleError(): void {
-		const native = this._host.nativeElement
+		const nativeElement = this._host.nativeElement
 		// console.log('🔴 Crash image -->', this._host)
-		native.src = this.fallbackImage
+		nativeElement.src = this.fallbackImage
 	}
 }
