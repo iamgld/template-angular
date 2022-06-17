@@ -6,12 +6,14 @@
 		"start": "ng serve",
 		"start:open": "ng serve --open",
 		"start:host": "ng serve --host 0.0.0.0",
+		"build:stats": "ng build --optimization --configuration development --stats-json",
 		"build:prod": "ng build --optimization --configuration production --progress",
 		"build:dev": "ng build --optimization --configuration development --progress",
 		"test": "ng test",
 		"lint": "eslint src/app/",
 		"lint:ng": "ng lint",
 		"lint:fix": "eslint --fix src/app/",
+		"analyze": "webpack-bundle-analyzer dist/stats.json",
 		"postinstall": "husky install"
 	},
 	"private": true,
@@ -55,6 +57,7 @@
 		"karma-jasmine": "5.1.0",
 		"karma-jasmine-html-reporter": "2.0.0",
 		"prettier": "2.7.1",
-		"typescript": "4.7.3"
+		"typescript": "4.7.3",
+		"webpack-bundle-analyzer": "4.5.0"
 	}
 }
