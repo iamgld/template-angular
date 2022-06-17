@@ -28,7 +28,10 @@
 			"@app/guards": ["src/app/shared/guards/index.ts"],
 			"@app/pipes": ["src/app/shared/pipes/index.ts"],
 			"@app/directives": ["src/app/shared/directives/index.ts"],
-			"@app/ngrx/*": ["src/app/state-management/*"]
+			"@app/resolvers": ["src/app/shared/resolvers/index.ts"],
+			"@app/interceptors": ["src/app/shared/interceptors/index.ts"],
+			"@app/validators": ["src/app/shared/validators/index.ts"],
+			"@app/ngrx/*": ["src/app/store/*"]
 		}
 	},
 	"angularCompilerOptions": {
