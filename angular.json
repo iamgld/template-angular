@@ -133,7 +133,8 @@
 		}
 	},
 	"defaultProject": "ng-template-lint",
-	"cli": {
+  "cli": {
+    "analytics": "d0133cb2-cf37-4f74-9eae-e01b3cba218c",
 		"defaultCollection": "@angular-eslint/schematics"
 	}
 }
