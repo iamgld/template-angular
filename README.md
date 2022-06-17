@@ -16,7 +16,7 @@ to serve normal use this configuration:
   yarn start || npm run start
 ```
 
-to serve and automatically open the browsers use this configuration:
+to serve and automatically open the browser use this configuration:
 
 ```
   yarn start:open || npm run start:open
