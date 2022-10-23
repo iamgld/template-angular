@@ -3,34 +3,18 @@
 	"version": 1,
 	"newProjectRoot": "projects",
 	"projects": {
-		"ng-template-lint": {
+		"angular-template": {
 			"projectType": "application",
 			"schematics": {
 				"@schematics/angular:application": {
 					"strict": true
 				},
 				"@schematics/angular:component": {
-					"style": "scss",
-					"skipTests": true
+					"style": "scss"
 				},
-				"@schematics/angular:service": {
-					"skipTests": true
-				},
+
 				"@schematics/angular:class": {
-					"skipTests": true,
 					"type": "class"
-				},
-				"@schematics/angular:guard": {
-					"skipTests": true
-				},
-				"@schematics/angular:pipe": {
-					"skipTests": true
-				},
-				"@schematics/angular:directive": {
-					"skipTests": true
-				},
-				"@schematics/angular:resolver": {
-					"skipTests": true
 				},
 				"@schematics/angular:interface": {
 					"type": "model"
@@ -52,15 +36,43 @@
 						"polyfills": "src/polyfills.ts",
 						"tsConfig": "tsconfig.app.json",
 						"inlineStyleLanguage": "scss",
-						"assets": ["src/favicon.ico", "src/assets"],
+						"assets": [
+							"src/favicon.ico",
+							{
+								"glob": "**/*",
+								"input": "src/assets",
+								"output": "assets"
+							}
+						],
+						"styles": ["src/index.scss"],
 						"stylePreprocessorOptions": {
 							"includePaths": ["./src/app/styles"]
 						},
-						"styles": ["src/index.scss"],
-						"scripts": []
+						"scripts": [],
+						"aot": true,
+						"vendorChunk": true,
+						"extractLicenses": false,
+						"buildOptimizer": false,
+						"sourceMap": true,
+						"optimization": false,
+						"namedChunks": true
 					},
 					"configurations": {
 						"production": {
+							"fileReplacements": [
+								{
+									"replace": "src/environments/environment.ts",
+									"with": "src/environments/environment.prod.ts"
+								}
+							],
+							"optimization": true,
+							"outputHashing": "all",
+							"sourceMap": false,
+							"namedChunks": false,
+							"aot": true,
+							"extractLicenses": true,
+							"vendorChunk": false,
+							"buildOptimizer": true,
 							"budgets": [
 								{
 									"type": "initial",
@@ -72,23 +84,9 @@
 									"maximumWarning": "2kb",
 									"maximumError": "4kb"
 								}
-							],
-							"fileReplacements": [
-								{
-									"replace": "src/environments/environment.ts",
-									"with": "src/environments/environment.prod.ts"
-								}
-							],
-							"outputHashing": "all"
+							]
 						},
-						"development": {
-							"buildOptimizer": false,
-							"optimization": false,
-							"vendorChunk": true,
-							"extractLicenses": false,
-							"sourceMap": true,
-							"namedChunks": true
-						}
+						"development": {}
 					},
 					"defaultConfiguration": "production"
 				},
@@ -96,10 +94,10 @@
 					"builder": "@angular-devkit/build-angular:dev-server",
 					"configurations": {
 						"production": {
-							"browserTarget": "ng-template-lint:build:production"
+							"browserTarget": "angular-template:build:production"
 						},
 						"development": {
-							"browserTarget": "ng-template-lint:build:development"
+							"browserTarget": "angular-template:build:development"
 						}
 					},
 					"defaultConfiguration": "development"
@@ -107,7 +105,7 @@
 				"extract-i18n": {
 					"builder": "@angular-devkit/build-angular:extract-i18n",
 					"options": {
-						"browserTarget": "ng-template-lint:build"
+						"browserTarget": "angular-template:build"
 					}
 				},
 				"test": {
@@ -132,9 +130,9 @@
 			}
 		}
 	},
-	"defaultProject": "ng-template-lint",
-  "cli": {
-    "analytics": "d0133cb2-cf37-4f74-9eae-e01b3cba218c",
+	"defaultProject": "angular-template",
+	"cli": {
+		"analytics": "false",
 		"defaultCollection": "@angular-eslint/schematics"
 	}
 }
