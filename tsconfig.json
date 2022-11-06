@@ -20,18 +20,19 @@
 		"module": "es2020",
 		"lib": ["es2020", "dom"],
 		"paths": {
-			"@app/environment": ["src/environments/environment.ts"],
-			"@app/components": ["src/app/shared/components/index.ts"],
-			"@app/services": ["src/app/shared/services/index.ts"],
-			"@app/modules": ["src/app/shared/modules/index.ts"],
-			"@app/models": ["src/app/shared/models/index.ts"],
-			"@app/guards": ["src/app/shared/guards/index.ts"],
-			"@app/pipes": ["src/app/shared/pipes/index.ts"],
-			"@app/directives": ["src/app/shared/directives/index.ts"],
-			"@app/resolvers": ["src/app/shared/resolvers/index.ts"],
-			"@app/interceptors": ["src/app/shared/interceptors/index.ts"],
-			"@app/validators": ["src/app/shared/validators/index.ts"],
-			"@app/ngrx/*": ["src/app/store/*"]
+			// Shared and Global paths
+			"@shared/components": ["src/app/shared/components/index.ts"],
+			"@shared/services": ["src/app/shared/services/index.ts"],
+			"@shared/modules": ["src/app/shared/modules/index.ts"],
+			"@shared/models": ["src/app/shared/models/index.ts"],
+			"@shared/guards": ["src/app/shared/guards/index.ts"],
+			"@shared/pipes": ["src/app/shared/pipes/index.ts"],
+			"@shared/directives": ["src/app/shared/directives/index.ts"],
+			"@shared/resolvers": ["src/app/shared/resolvers/index.ts"],
+			"@shared/interceptors": ["src/app/shared/interceptors/index.ts"],
+			"@shared/validators": ["src/app/shared/validators/index.ts"],
+			"@environment": ["src/environments/environment.ts"],
+			"@store/*": ["src/app/store/*"]
 		}
 	},
 	"angularCompilerOptions": {

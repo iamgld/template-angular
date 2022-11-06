@@ -12,8 +12,9 @@
 		"build:stats": "ng build --optimization --configuration development --stats-json",
 		"test": "ng test",
 		"lint": "eslint src/app/",
-		"lint:ng": "ng lint",
 		"lint:fix": "eslint --fix src/app/",
+		"lint:ng": "ng lint",
+		"lint:ng:fix": "ng lint --fix",
 		"analyze": "webpack-bundle-analyzer dist/stats.json",
 		"postinstall": "husky install"
 	},
@@ -27,6 +28,11 @@
 		"@angular/platform-browser": "14.2.8",
 		"@angular/platform-browser-dynamic": "14.2.8",
 		"@angular/router": "14.2.8",
+		"@ngrx/effects": "14.3.2",
+		"@ngrx/store": "14.3.2",
+		"@ngrx/store-devtools": "14.3.2",
+		"@ngrx/router-store": "14.3.2",
+		"@ngrx/schematics": "14.3.2",
 		"rxjs": "7.5.7",
 		"tslib": "2.4.1",
 		"zone.js": "0.11.8"
