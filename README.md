@@ -1,27 +1,113 @@
 # NgTemplateLint
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.2.0.
+This template was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.0.2.
+
+---
 
 ## Development server
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Run `yarn start` or `npm run start` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
-## Code scaffolding
+### Development server options
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+to serve normal use this configuration:
+
+```
+  yarn start || npm run start
+```
+
+to serve and automatically open the browser use this configuration:
+
+```
+  yarn start:open || npm run start:open
+```
+
+to serve and access from a local network use this configuration:
+
+```
+  yarn start:host || npm run start:host
+```
+
+<!-- ## Code scaffolding
+
+Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`. -->
+
+---
 
 ## Build
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+Run `yarn build:option` or `npm run build:option` to build the project. The build artifacts will be stored in the `dist/` directory.
 
-## Running unit tests
+### Build options
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+to compile for `development` use this configuration:
 
-## Running end-to-end tests
+```
+  yarn build:dev || npm run build:dev
+```
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+to compile for `production` use this configuration:
 
-## Further help
+```
+  yarn build:prod || npm run build:prod
+```
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+to compile for `webpack-bundle-analyzer` use this configuration:
+
+```
+  yarn build:stats || npm run build:stats
+```
+
+---
+
+## Linter
+
+Run `yarn lint` or `npm run lint` to show in the terminal the error that linter finds according to the configuration
+
+### Linter options
+
+to show error use this configuration:
+
+```
+  yarn lint || npm run lint
+```
+
+to show error and automatically fix it use this configuration:
+
+```
+  yarn lint:fix || npm run lint:fix
+```
+
+to run linter default inside angular use this configuration:
+
+```
+  yarn lint:ng || npm run lint:ng
+```
+
+---
+
+## Husky
+
+At the end of the installation of all the packages, husky will be installed, a tool that will allow us to automatically run `git hooks`, in our case to run the `commitlint` and `eslint` linters before committing.
+
+---
+
+## Tools
+
+### Webpack Bundle Analyzer
+
+`Webpack-bundle-analyzer` is a tool that allows us to graphically see when our application weighs and segmented by modules, this helps us to discover failures in the application's performance
+
+to use `webpack-bundle-analyzer`, before you must use this command `yarn build:stats` or `npm run build:stats` which generates the stats files that allow webpack-bundle-analyzer to work properly
+
+```
+  yarn analyze || npm run analyze
+```
+
+<!-- ## Running unit tests
+
+Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io). -->
+
+<!-- ## Running end-to-end tests
+
+Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities. -->
