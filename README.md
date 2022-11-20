@@ -1,6 +1,6 @@
-# NgTemplateLint
+# Angular Template
 
-This template was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.0.2.
+This template was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.2.8
 
 ---
 
@@ -26,6 +26,12 @@ to serve and access from a local network use this configuration:
 
 ```
   yarn start:host || npm run start:host
+```
+
+to serve as `production` run use this configuration:
+
+```
+  yarn start:prod || npm run start:prod
 ```
 
 <!-- ## Code scaffolding
@@ -82,6 +88,12 @@ to run linter default inside angular use this configuration:
 
 ```
   yarn lint:ng || npm run lint:ng
+```
+
+to show error and automatically fix it use ng configuration:
+
+```
+  yarn lint:ng:fix || npm run lint:ng:fix
 ```
 
 ---

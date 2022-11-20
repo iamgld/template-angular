@@ -1,12 +1,15 @@
 {
 	"name": "angular-template",
-	"version": "2.0.0",
+	"version": "3.0.0",
+	"author": "Gregory J Lopez",
+	"homepage": "https://iamgld.com",
 	"scripts": {
 		"ng": "ng",
 		"start": "ng serve",
 		"start:open": "ng serve --open",
 		"start:host": "ng serve --host 0.0.0.0",
-		"build": "ng build --optimization --configuration development --progress",
+		"start:prod": "ng serve --configuration production",
+		"build": "yarn build:prod",
 		"build:dev": "ng build --optimization --configuration development --progress",
 		"build:prod": "ng build --optimization --configuration production --progress",
 		"build:stats": "ng build --optimization --configuration development --stats-json",
