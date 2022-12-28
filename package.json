@@ -1,5 +1,6 @@
 {
-	"name": "angular-template",
+	"name": "template-angular",
+	"private": false,
 	"version": "3.0.0",
 	"author": "Gregory J Lopez",
 	"homepage": "https://iamgld.com",
@@ -21,7 +22,6 @@
 		"analyze": "webpack-bundle-analyzer dist/stats.json",
 		"postinstall": "husky install"
 	},
-	"private": true,
 	"dependencies": {
 		"@angular/animations": "14.2.8",
 		"@angular/common": "14.2.8",
