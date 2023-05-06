@@ -16,11 +16,10 @@
 		"experimentalDecorators": true,
 		"moduleResolution": "node",
 		"importHelpers": true,
-		"target": "es2017",
+		"target": "ES2022",
 		"module": "es2020",
 		"lib": ["es2020", "dom"],
 		"paths": {
-			// Shared and Global paths
 			"@shared/components": ["src/app/shared/components/index.ts"],
 			"@shared/services": ["src/app/shared/services/index.ts"],
 			"@shared/modules": ["src/app/shared/modules/index.ts"],
@@ -33,7 +32,8 @@
 			"@shared/validators": ["src/app/shared/validators/index.ts"],
 			"@environment": ["src/environments/environment.ts"],
 			"@store/*": ["src/app/store/*"]
-		}
+		},
+		"useDefineForClassFields": false
 	},
 	"angularCompilerOptions": {
 		"enableI18nLegacyMessageIdFormat": false,
