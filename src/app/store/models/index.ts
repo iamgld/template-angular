@@ -1,4 +1,2 @@
-// ----------Global----------
-export * from './global.model'
-// ----------Auth----------
 export * from './auth/auth.model'
+export * from './global.model'

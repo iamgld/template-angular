@@ -1,5 +1,5 @@
-import { AuthState } from '@store/models'
+import { IAuthState } from '@store/models'
 
-export interface GlobalState {
-	auth: AuthState
+export interface IGlobalState {
+	auth: IAuthState
 }

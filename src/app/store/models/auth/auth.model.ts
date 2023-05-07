@@ -1,3 +1,3 @@
-export interface AuthState {
+export interface IAuthState {
 	logged: boolean
 }
