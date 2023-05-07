@@ -1,23 +1,23 @@
 // Store Imports
 import { createReducer, on } from '@ngrx/store'
 import { LOGIN, LOGOUT } from '@store/actions'
-import { AuthState } from '@store/models'
+import { IAuthState } from '@store/models'
 
-export const initialAuthState: AuthState = {
+export const initialAuthState: IAuthState = {
 	logged: false,
 }
 
 export const authReducer = createReducer(
 	initialAuthState,
 	// ----------Login----------
-	on(LOGIN, (previousState: AuthState, props) => {
+	on(LOGIN, (previousState: IAuthState, props): IAuthState => {
 		return {
 			...previousState,
 			logged: true,
 		}
 	}),
 	// ----------Logout----------
-	on(LOGOUT, (previousState: AuthState) => {
+	on(LOGOUT, (previousState: IAuthState): IAuthState => {
 		return { ...previousState, ...initialAuthState }
 	})
 )

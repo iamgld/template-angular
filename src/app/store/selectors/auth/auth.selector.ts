@@ -1,7 +1,11 @@
 // Store Imports
-import { createSelector } from '@ngrx/store'
-import { GlobalState, AuthState } from '@store/models'
+import { createFeatureSelector, createSelector } from '@ngrx/store'
+// Shared Imports
+import { IAuthState } from '@store/models'
 
-export const authState = (state: GlobalState) => state.auth
+const selectFeatureSelector = createFeatureSelector<IAuthState>('auth')
 
-export const getLoggedSelector = createSelector(authState, (auth: AuthState) => auth.logged)
+export const selectLoggedSelector = createSelector(
+	selectFeatureSelector,
+	(auth: IAuthState) => auth.logged
+)
