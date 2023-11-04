@@ -1,5 +1,5 @@
 // Angular Imports
-import { environment } from '@environment'
+import { environment } from 'src/environments/environment.local'
 // Store Imports
 import { ActionReducerMap, MetaReducer } from '@ngrx/store'
 import { IGlobalState } from '@store/models'

@@ -3,6 +3,7 @@ import { Directive, ElementRef, HostListener, Input } from '@angular/core'
 
 @Directive({
 	selector: 'img[appImageBroken]',
+	standalone: true,
 })
 export class ImageBrokenDirective {
 	@Input() fallbackImage = 'assets/images/utils/image-broken.png'

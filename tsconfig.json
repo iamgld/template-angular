@@ -17,8 +17,8 @@
 		"moduleResolution": "node",
 		"importHelpers": true,
 		"target": "ES2022",
-		"module": "es2020",
-		"lib": ["es2020", "dom"],
+		"module": "ES2022",
+		"lib": ["ES2022", "dom"],
 		"paths": {
 			// Shared and Global paths
 			"@shared/components": ["src/app/shared/components/index.ts"],
@@ -31,7 +31,7 @@
 			"@shared/resolvers": ["src/app/shared/resolvers/index.ts"],
 			"@shared/interceptors": ["src/app/shared/interceptors/index.ts"],
 			"@shared/validators": ["src/app/shared/validators/index.ts"],
-			"@environment": ["src/environments/environment.ts"],
+			"@environment": ["src/environments/environment.local.ts"],
 			"@store/*": ["src/app/store/*"]
 		},
 		"useDefineForClassFields": false

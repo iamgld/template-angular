@@ -1,88 +1,71 @@
-@use 'styles' as styles;
+@use './setting' as setting;
+@use './tools' as tools;
 @use '@angular/material' as mat;
 
-// Custom Theming for Angular Material
-// For more information: https://material.angular.io/guide/theming
-// @import '~@angular/material/theming';
-// Plus imports for other components in your app.
-// Include the common styles for Angular Material. We include this here so that you only
-// have to load a single css file for Angular Material in your app.
-// Be sure that you only ever include this mixin once!
 @include mat.core();
-// Define the palettes for your theme using the Material Design palettes available in palette.scss
-// (imported above). For each palette, you can optionally specify a default, lighter, and darker
-// hue. Available color palettes: https://material.io/design/color/
-// Create the theme object. A theme consists of configurations for individual
-// theming systems such as "color" or "typography".
+
 $mat-primary-scheme: (
-	100: styles.colors(primaryLight),
-	500: styles.colors(primary),
-	700: styles.colors(primaryDark),
+	100: tools.colors(darkgray-one),
+	500: tools.colors(darkgray-two),
+	700: tools.colors(darkgray-three),
 	contrast: (
-		100: styles.colors(light),
-		500: styles.colors(light),
-		700: styles.colors(light),
+		100: tools.colors(white-two),
+		500: tools.colors(white-two),
+		700: tools.colors(white-two),
 	),
 );
 $mat-accent-scheme: (
-	100: styles.colors(accentLight),
-	500: styles.colors(accent),
-	700: styles.colors(accentDark),
+	100: tools.colors(orange-one),
+	500: tools.colors(orange-two),
+	700: tools.colors(darkgray-two),
 	contrast: (
-		100: styles.colors(dark),
-		500: styles.colors(light),
-		700: styles.colors(light),
+		100: tools.colors(darkgray-two),
+		500: tools.colors(white-two),
+		700: tools.colors(white-two),
 	),
 );
 $mat-warn-scheme: (
-	100: styles.colors(warnLight),
-	500: styles.colors(warn),
-	700: styles.colors(warnDark),
+	100: tools.colors(red-one),
+	500: tools.colors(red-two),
+	700: tools.colors(red-two),
 	contrast: (
-		100: styles.colors(dark),
-		500: styles.colors(dark),
-		700: styles.colors(light),
+		100: tools.colors(darkgray-two),
+		500: tools.colors(darkgray-two),
+		700: tools.colors(white-two),
 	),
 );
 $mat-primary-palette: mat.define-palette($mat-primary-scheme);
 $mat-accent-palette: mat.define-palette($mat-accent-scheme);
 $mat-warn-palette: mat.define-palette($mat-warn-scheme);
 
-// Include theme styles for core and each component used in your app.
-// Alternatively, you can import and @include the theme mixins for each component
-// that you are using.
-$app-light-theme: mat.define-light-theme(
+$app-theme-light: mat.define-light-theme(
 	(
 		color: (
 			primary: $mat-primary-palette,
 			accent: $mat-accent-palette,
 			warn: $mat-warn-palette,
 		),
-		// typography: mat.define-typography-config(),
-		// density: 0,,,,
 	)
 );
-.LightTheme {
-	@include mat.all-component-themes($app-light-theme);
-	background-color: styles.colors(light);
-	color: styles.colors(primaryDark);
+.Theme--light {
+	@include mat.core-theme($app-theme-light);
+	@include mat.all-component-themes($app-theme-light);
+	background-color: tools.colors(white-two);
+	color: tools.colors(darkgray-three);
 }
 
-// following section is for dark mode.
-// use appropriate class name for darkMode
-$app-dark-theme: mat.define-dark-theme(
+$app-theme-dark: mat.define-dark-theme(
 	(
 		color: (
 			primary: $mat-primary-palette,
 			accent: $mat-accent-palette,
 			warn: $mat-warn-palette,
 		),
-		// typography: mat.define-typography-config(),
-		// density: 0,,,,
 	)
 );
-.DarkTheme {
-	@include mat.all-component-colors($app-dark-theme);
-	background-color: styles.colors(primaryLight);
-	color: styles.colors(light);
+.Theme--dark {
+	@include mat.core-color($app-theme-dark);
+	@include mat.all-component-colors($app-theme-dark);
+	background-color: tools.colors(darkgray-two);
+	color: tools.colors(white-two);
 }
