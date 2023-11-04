@@ -37,7 +37,7 @@
 						"style": "kebab-case"
 					}
 				],
-				"no-console": "warn",
+				"no-console": ["error", { "allow": ["error"] }],
 				"no-unused-expressions": [
 					"error",
 					{

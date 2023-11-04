@@ -31,7 +31,7 @@
 			"@shared/resolvers": ["src/app/shared/resolvers/index.ts"],
 			"@shared/interceptors": ["src/app/shared/interceptors/index.ts"],
 			"@shared/validators": ["src/app/shared/validators/index.ts"],
-			"@environment": ["src/environments/environment.ts"],
+			"@environment": ["src/environments/environment.local.ts"],
 			"@store/*": ["src/app/store/*"]
 		},
 		"useDefineForClassFields": false
