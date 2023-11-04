@@ -1,5 +1,3 @@
-@use 'sass:math';
-
 /*
   En esta capa estarán:
     1. configuraciones disponibles globalmente
@@ -20,28 +18,56 @@ $breakPoints: (
 	// desktop
 	dt: 992px,
 	// extra desktop
-	xd: 1200px
+	xd: 1280px
 );
 // Fontsize and configurations
-$fontsize: 16px;
-$ratio: 1.25; // ratio
-$fontsizeNormal: $fontsize; // normal size, 16px
-$fontsizeHeadingThree: $fontsizeNormal * $ratio; // heading 3, 20px
-$fontsizeHeadingTwo: $fontsizeHeadingThree * $ratio; // heading 2, 25px
-$fontsizeHeadingOne: $fontsizeHeadingTwo * $ratio; // heading 1, 31.25px
-$fontsizeSmallOne: math.div($fontsizeNormal, $ratio); // small 1, 12.8px
-$fontsizeSmallTwo: math.div($fontsizeSmallOne, $ratio); // small 2, 8.192px
 $fontsizes: (
-	normal: 16px,
+	headingOne: 32px,
 	headingThree: 20px,
 	headingTwo: 25px,
-	headingOne: 32px,
-	smallOne: 12px,
-	smallTwo: 8px,
+	normal: 16px,
+	small: 12px,
+	tiny: 8px,
 );
 // Fonts family
-$roboto: 'Roboto', sans-serif;
-$quicksand: 'Quicksand', sans-serif;
+@font-face {
+	font-family: 'Poppins';
+	src: url('/assets/fonts/poppins/Poppins-Light.ttf');
+	font-weight: 300;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'Poppins';
+	src: url('/assets/fonts/poppins/Poppins-Regular.ttf');
+	font-weight: 400;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'Poppins';
+	src: url('/assets/fonts/poppins/Poppins-SemiBold.ttf');
+	font-weight: 600;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'Fira Code';
+	src: url('/assets/fonts/fira-code/FiraCode-Light.ttf');
+	font-weight: 300;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'Fira Code';
+	src: url('/assets/fonts/fira-code/FiraCode-Regular.ttf');
+	font-weight: 400;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'Fira Code';
+	src: url('/assets/fonts/fira-code/FiraCode-SemiBold.ttf');
+	font-weight: 600;
+	font-style: normal;
+}
+$poppins: 'Poppins', sans-serif;
+$firaCode: 'Fira Code', monospace;
 // Line height
 $lineHeight: 1.2;
 // Max width
@@ -49,22 +75,26 @@ $maxWidth: 1280px;
 // Rounded sizes for edge and more
 $radius: (
 	z: 0,
+	xxxs: 4px,
 	xxs: 6px,
 	xs: 8px,
 	s: 12px,
 	m: 16px,
 	l: 24px,
 	xl: 32px,
+	xxl: 40px,
 );
 // Sizes of spaced
 $spacing: (
 	z: 0,
+	xxxs: 4px,
 	xxs: 8px,
 	xs: 12px,
 	s: 16px,
 	m: 24px,
 	l: 32px,
 	xl: 48px,
+	xxl: 66px,
 );
 // List of z-index
 $zindexs: (
@@ -74,25 +104,60 @@ $zindexs: (
 	four: 4000,
 	five: 5000,
 );
-// Colors palette Change for project
-$colors: (
-	primary: #531bba,
-	primaryLight: #cba0ff,
-	primaryDark: #150132,
-	accent: #ffa800,
-	accentLight: #ffc500,
-	accentDark: #bc791c,
-	warn: #ff3a2d,
-	warnLight: #fe294c,
-	warnDark: #a41a31,
-	success: #1de9b6,
-	successLight: #64ffda,
-	successDark: #00bfa5,
-	light: #f5f5f5,
-	dark: #393939,
-	gray: #b5b5b5,
-	grayLight: #dbdbdb,
-	grayDark: #535353,
-	white: #ffffff,
-	black: #000000,
+// Icon buttons sizes
+$iconsizes: (
+	large: 48px,
+	medium: 40px,
+	normal: 32px,
+	small: 24px,
+	tiny: 16px,
 );
+// Colors palette for material
+$colors: (
+	darkgray-one: #313338,
+	darkgray-two: #2b2d31,
+	darkgray-three: #232428,
+	darkgray-four: #111214,
+	gray-one: #dbdbdb,
+	gray-two: #b5b5b5,
+	gray-three: #535353,
+	blue-one: #949cf7,
+	blue-two: #3e70dd,
+	blue-three: #216add,
+	green-one: #b4e1ce,
+	green-two: #58f287,
+	green-three: #45ddc0,
+	yellow-one: #ffeac0,
+	yellow-two: #ffd56c,
+	yellow-three: #f7de52,
+	orange-one: #fbb848,
+	orange-two: #f8a22f,
+	orange-three: #ef8843,
+	red-one: #f47b67,
+	red-two: #ed4245,
+	pink-one: #ffb0ff,
+	pink-two: #ff6bfa,
+	purple-one: #9c84ef,
+	purple-two: #593695,
+	white-one: #ffffff,
+	white-two: #f2f3f5,
+	white-three: #ebedef,
+	white-four: #e3e5e8,
+);
+
+// Navbar height
+$navbarHeight: 50px;
+$navbarHeightWithMargin: 66px;
+// Footer height
+$footerHeight: 184px;
+$footerHeightWithMargin: 220px;
+// Borders
+$borderSize: 2px;
+$borderColorLight: map-get($colors, darkgray-one);
+$borderColorDark: map-get($colors, darkgray-three);
+// Shadows
+$shadowLight: 3px 3px 0 map-get($colors, gray-two);
+$shadowDark: 3px 3px 0 map-get($colors, darkgray-four);
+// Overlays
+$overladyLight: rgba(map-get($colors, white-two), 0.8);
+$overladyDark: rgba(map-get($colors, darkgray-two), 0.8);

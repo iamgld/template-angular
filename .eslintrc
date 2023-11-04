@@ -37,7 +37,7 @@
 						"style": "kebab-case"
 					}
 				],
-				"no-console": "warn",
+				"no-console": ["error", { "allow": ["error"] }],
 				"no-unused-expressions": [
 					"error",
 					{
@@ -57,7 +57,8 @@
 			"files": ["*.ts"],
 			"extends": ["plugin:@ngrx/recommended-requiring-type-checking"],
 			"rules": {
-				"@ngrx/use-consistent-global-store-name": "off"
+				"@ngrx/use-consistent-global-store-name": "off",
+				"@ngrx/no-store-subscription": "off"
 			}
 		}
 	]
