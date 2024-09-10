@@ -7,6 +7,16 @@
 			2,
 			"always",
 			200
+		],
+		"body-max-length": [
+			2,
+			"always",
+			2000
+		],
+		"body-max-line-length": [
+			2,
+			"always",
+			200
 		]
 	}
 }
