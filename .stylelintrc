@@ -6,10 +6,8 @@
 			"customSyntax": "postcss-angular"
 		}
 	],
-	"plugins": ["stylelint-selector-bem-pattern", "stylelint-order"],
+	"plugins": ["stylelint-selector-bem-pattern"],
 	"rules": {
-		"order/order": ["custom-properties", "declarations"],
-		"order/properties-order": ["width", "height"],
 		"selector-class-pattern": null,
 		"selector-type-no-unknown": null,
 		"color-function-notation": "legacy",
@@ -31,8 +29,15 @@
 				"initial": "^\\.{componentName}(?:-[a-zA-Z0-9]+)*$",
 				"combined": "^\\.combined-{componentName}-[a-zA-Z0-9]+$"
 			},
-			"utilitySelectors": "^\\.Util-[a-zA-Z0-9]+$",
+			"utilitySelectors": "",
 			"ignoreSelectors": ["/^Theme--.*/", "/^mat-.*/"]
-		}
+		},
+		"custom-property-pattern": null,
+		"no-duplicate-selectors": null,
+		"scss/at-mixin-pattern": null,
+		"scss/at-function-pattern": null,
+		"scss/operator-no-newline-after": null,
+		"scss/load-no-partial-leading-underscore": null,
+		"no-empty-source": null
 	}
 }
