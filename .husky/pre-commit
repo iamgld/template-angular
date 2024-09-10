@@ -1,4 +1,1 @@
-#!/bin/sh
-. "$(dirname "$0")/_/husky.sh"
-
-echo "[hook pre-commit] Running Eslint..." && pnpm eslint:fix
+echo "[hook pre-commit] Running linters - linting, formatting and stylelint..." && npm run linter

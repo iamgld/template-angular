@@ -19,20 +19,13 @@
 		"target": "ES2022",
 		"module": "ES2022",
 		"lib": ["ES2022", "dom"],
+		"allowSyntheticDefaultImports": true,
 		"paths": {
-			// Shared and Global paths
-			"@shared/components": ["src/app/shared/components/index.ts"],
-			"@shared/services": ["src/app/shared/services/index.ts"],
-			"@shared/modules": ["src/app/shared/modules/index.ts"],
-			"@shared/models": ["src/app/shared/models/index.ts"],
-			"@shared/guards": ["src/app/shared/guards/index.ts"],
-			"@shared/pipes": ["src/app/shared/pipes/index.ts"],
-			"@shared/directives": ["src/app/shared/directives/index.ts"],
-			"@shared/resolvers": ["src/app/shared/resolvers/index.ts"],
-			"@shared/interceptors": ["src/app/shared/interceptors/index.ts"],
-			"@shared/validators": ["src/app/shared/validators/index.ts"],
+			// App Paths
+			"@app": ["src/app/index.ts"],
 			"@environment": ["src/environments/environment.local.ts"],
-			"@store/*": ["src/app/store/*"]
+			// Shared Paths
+			"@shared/*": ["src/app/shared/*"],
 		},
 		"useDefineForClassFields": false
 	},
@@ -41,5 +34,6 @@
 		"strictInjectionParameters": true,
 		"strictInputAccessModifiers": true,
 		"strictTemplates": true
-	}
+	},
+	"exclude": ["src/env.d.ts"]
 }
