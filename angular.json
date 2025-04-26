@@ -41,7 +41,7 @@
 						"server": "src/main.server.ts",
 						"prerender": true,
 						"ssr": {
-							"entry": "server.ts"
+							"entry": "src/server.ts"
 						},
 						"polyfills": ["zone.js"],
 						"tsConfig": "tsconfig.app.json",
@@ -163,4 +163,3 @@
 		"schematicCollections": ["@angular-eslint/schematics"]
 	}
 }
-

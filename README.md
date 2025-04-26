@@ -104,7 +104,7 @@ At the end of the installation of all the packages, husky will be installed, a t
 
 ---
 
-## Tools
+<!-- ## Tools
 
 ### Webpack Bundle Analyzer
 
@@ -114,7 +114,7 @@ to use `webpack-bundle-analyzer`, before you must use this command `yarn build:s
 
 ```
   yarn analyze || npm run analyze
-```
+``` -->
 
 <!-- ## Running unit tests
 
