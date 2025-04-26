@@ -22,7 +22,6 @@
 	--font-size--small: 12px;
 	--font-size--tiny: 8px;
 	--font--poppins: 'Poppins', sans-serif;
-	--font--firacode: 'Fira Code', sans-serif;
 
 	// Radius
 	--radius--z: 0;
@@ -61,33 +60,6 @@
 	--icon-size--tiny: 16px;
 
 	// Colors
-	--darkgray--one: #313338;
-	--darkgray--two: #2b2d31;
-	--darkgray--three: #232428;
-	--darkgray--four: #111214;
-	--gray--one: #dbdbdb;
-	--gray--two: #b5b5b5;
-	--gray--three: #535353;
-	--blue--one: #949cf7;
-	--blue--two: #3e70dd;
-	--blue--three: #216add;
-	--green--one: #b4e1ce;
-	--green--two: #58f287;
-	--green--three: #45ddc0;
-	--yellow--one: #ffeac0;
-	--yellow--two: #ffd56c;
-	--yellow--three: #f7de52;
-	--orange--one: #fbb848;
-	--orange--two: #f8a22f;
-	--orange--three: #ef8843;
-	--red--one: #f47b67;
-	--red--two: #ed4245;
-	--pink--one: #ffb0ff;
-	--pink--two: #ff6bfa;
-	--purple--one: #9c84ef;
-	--purple--two: #593695;
-
-	// New Colors
 	--red: #ef4444;
 	--blue: #3c82f6;
 	--darkblue: #101827;
@@ -111,16 +83,7 @@
 	--gradient--orange-to-mustard: linear-gradient(to right, var(--orange), var(--mustard));
 
 	// Borders
-	--border-size: 3px;
-
-	// --border-color--light: var(--darkgray--one);
-	// --border-color--dark: var(--darkgray--four);
-	// Shadows
-	// --shadow--light: 3px 3px 0 var(--gray--two);
-	// --shadow--dark: 3px 3px 0 var(--darkgray--four);
-	// Overlays
-	// --overlady--light: color-mix(in srgb, var(--white--two), transparent 5%);
-	// --overlady--dark: color-mix(in srgb, var(--darkgray--two), transparent 5%);
+	--border-size: 2px;
 	// Animations
 	--animation-time--150: 150ms;
 	--animation-time--200: 200ms;
@@ -129,67 +92,7 @@
 
 	// General
 	--max-width: 1280px;
-	--line-height: 1.25;
+	--line-height: 1.2;
 	--navbar-height: 50px;
 	--footer-height: 200px;
-}
-
-// Fonts family
-@font-face {
-	font-family: Poppins;
-	src: url('/assets/fonts/poppins/Poppins-Light.ttf');
-	font-weight: 300;
-	font-style: normal;
-}
-
-@font-face {
-	font-family: Poppins;
-	src: url('/assets/fonts/poppins/Poppins-Regular.ttf');
-	font-weight: 400;
-	font-style: normal;
-}
-
-@font-face {
-	font-family: Poppins;
-	src: url('/assets/fonts/poppins/Poppins-SemiBold.ttf');
-	font-weight: 600;
-	font-style: normal;
-}
-
-@font-face {
-	font-family: 'Fira Code';
-	src: url('/assets/fonts/fira-code/FiraCode-Light.ttf');
-	font-weight: 300;
-	font-style: normal;
-}
-
-@font-face {
-	font-family: 'Fira Code';
-	src: url('/assets/fonts/fira-code/FiraCode-Regular.ttf');
-	font-weight: 400;
-	font-style: normal;
-}
-
-@font-face {
-	font-family: 'Fira Code';
-	src: url('/assets/fonts/fira-code/FiraCode-SemiBold.ttf');
-	font-weight: 600;
-	font-style: normal;
-}
-
-// Custom Properties
-@property --gradient-angle {
-	syntax: '<angle>';
-	initial-value: 0deg;
-	inherits: false;
-}
-
-@keyframes gradient-rotation {
-	0% {
-		--gradient-angle: 0deg;
-	}
-
-	100% {
-		--gradient-angle: 360deg;
-	}
 }
