@@ -1,82 +1,91 @@
 {
-	"name": "template-angular",
-	"private": false,
-	"version": "6.2.0",
-	"author": "Gregory López",
-	"homepage": "https://iamgld.dev",
-	"scripts": {
-		"ng": "ng",
-		"start": "ng serve --configuration development",
-		"start:open": "ng serve --configuration development --open",
-		"start:host": "ng serve --configuration development --host 0.0.0.0",
-		"start:stag": "ng serve --configuration staging",
-		"start:prod": "ng serve --configuration production",
-		"test": "jest",
-		"test:watch": "jest --watchAll",
-		"build": "npm run build:prod",
-		"build:dev": "ng build --configuration development --progress",
-		"build:stag": "ng build --configuration staging --progress",
-		"build:prod": "ng build --configuration production --progress",
-		"server:ssr": "node dist/server/server.mjs",
-		"prettier:": "prettier \"src/**/*.{ts,html,scss,css,js,json,md}\" --check --config .prettierrc",
-		"prettier:fix": "prettier \"src/**/*.{ts,html,scss,css,js,json,md}\" --write --config .prettierrc",
-		"stylelint": "stylelint  src/**/*.{css,scss}",
-		"stylelint:fix": "stylelint --fix  src/**/*.{css,scss}",
-		"eslint": "ng lint",
-		"eslint:fix": "ng lint --fix",
-		"linter": "npm run prettier:fix && npm run eslint:fix && npm run stylelint:fix",
-		"postinstall": "npx husky"
-	},
-	"dependencies": {
-		"@angular/animations": "18.2.13",
-		"@angular/cdk": "18.2.14",
-		"@angular/common": "18.2.13",
-		"@angular/compiler": "18.2.13",
-		"@angular/core": "18.2.13",
-		"@angular/forms": "18.2.13",
-		"@angular/material": "18.2.14",
-		"@angular/platform-browser": "18.2.13",
-		"@angular/platform-browser-dynamic": "18.2.13",
-		"@angular/platform-server": "18.2.13",
-		"@angular/router": "18.2.13",
-		"@angular/ssr": "18.2.19",
-		"@ngrx/signals": "18.1.1",
-		"express": "4.19.2",
-		"rxjs": "7.8.2",
-		"tslib": "2.8.1",
-		"zone.js": "0.14.10"
-	},
-	"devDependencies": {
-		"@angular-devkit/build-angular": "18.2.19",
-		"@angular/cli": "18.2.19",
-		"@angular/compiler-cli": "18.2.13",
-		"@commitlint/cli": "19.4.1",
-		"@commitlint/config-conventional": "19.8.0",
-		"@schematics/angular": "18.2.19",
-		"@types/express": "4.17.21",
-		"@types/jest": "29.5.14",
-		"@types/node": "22.15.2",
-		"angular-eslint": "18.4.3",
-		"eslint": "9.25.1",
-		"husky": "9.1.7",
-		"jest": "29.7.0",
-		"jest-preset-angular": "14.5.5",
-		"prettier": "3.5.3",
-		"stylelint": "16.19.1",
-		"stylelint-config-standard": "38.0.0",
-		"stylelint-config-standard-scss": "14.0.0",
-		"stylelint-selector-bem-pattern": "4.0.1",
-		"typescript": "5.5.4",
-		"typescript-eslint": "8.31.0"
-	},
-	"jest": {
-		"preset": "jest-preset-angular",
-		"setupFilesAfterEnv": [
-			"<rootDir>/config.jest.ts"
-		],
-		"moduleNameMapper": {
-			"@app/(.)": "<rootDir>/src/app/$1",
-			"@src/(.)": "<rootDir>/src/$1"
-		}
-	}
+  "name": "template-angular",
+  "private": false,
+  "version": "20.0.0",
+  "author": "Gregory López",
+  "homepage": "https://iamgld.dev",
+  "scripts": {
+    "ng": "ng",
+    "start": "ng serve -c development",
+    "start:open": "ng serve -c development --open",
+    "start:host": "ng serve -c development --host 0.0.0.0",
+    "start:stag": "ng serve -c staging",
+    "start:prod": "ng serve -c production",
+    "test": "jest",
+    "test:watch": "jest --watchAll",
+    "build": "npm run build:prod",
+    "build:dev": "ng build -c development --progress",
+    "build:stag": "ng build -c staging --progress",
+    "build:prod": "ng build -c production --progress",
+    "server:ssr": "node dist/server/server.mjs",
+    "prettier:": "prettier \"src/**/*.{ts,html,scss,css,js,json,md}\" --check --config .prettierrc",
+    "prettier:fix": "prettier \"src/**/*.{ts,html,scss,css,js,json,md}\" --write --config .prettierrc",
+    "stylelint": "stylelint  src/**/*.{css,scss}",
+    "stylelint:fix": "stylelint --fix  src/**/*.{css,scss}",
+    "eslint": "ng lint",
+    "eslint:fix": "ng lint --fix",
+    "linter": "npm run prettier:fix && npm run eslint:fix && npm run stylelint:fix",
+    "postinstall": "npx husky"
+  },
+  "dependencies": {
+    "@angular/animations": "20.3.10",
+    "@angular/cdk": "20.2.11",
+    "@angular/common": "20.3.10",
+    "@angular/compiler": "20.3.10",
+    "@angular/core": "20.3.10",
+    "@angular/forms": "20.3.10",
+    "@angular/material": "20.2.11",
+    "@angular/platform-browser": "20.3.10",
+    "@angular/platform-browser-dynamic": "20.3.10",
+    "@angular/platform-server": "20.3.10",
+    "@angular/router": "20.3.10",
+    "@angular/ssr": "20.3.9",
+    "@ngrx/signals": "20.1.0",
+    "express": "5.1.0",
+    "rxjs": "7.8.2",
+    "tslib": "2.8.1"
+  },
+  "devDependencies": {
+    "@angular/build": "20.3.9",
+    "@angular/cli": "20.3.9",
+    "@angular/compiler-cli": "20.3.10",
+    "@commitlint/cli": "20.1.0",
+    "@commitlint/config-conventional": "20.0.0",
+    "@schematics/angular": "20.3.9",
+    "@types/express": "5.0.5",
+    "@types/jest": "30.0.0",
+    "@types/node": "24.10.0",
+    "angular-eslint": "20.5.1",
+    "eslint": "9.39.1",
+    "husky": "9.1.7",
+    "jest": "30.2.0",
+    "jest-preset-angular": "15.0.3",
+    "prettier": "3.6.2",
+    "stylelint": "16.25.0",
+    "stylelint-config-standard": "39.0.1",
+    "stylelint-config-standard-scss": "16.0.0",
+    "stylelint-selector-bem-pattern": "4.0.1",
+    "typescript": "5.9.3",
+    "typescript-eslint": "8.46.3"
+  },
+  "prettier": {
+    "overrides": [
+      {
+        "files": "*.html",
+        "options": {
+          "parser": "angular"
+        }
+      }
+    ]
+  },
+  "jest": {
+    "preset": "jest-preset-angular",
+    "setupFilesAfterEnv": [
+      "<rootDir>/config.jest.ts"
+    ],
+    "moduleNameMapper": {
+      "@app/(.)": "<rootDir>/src/app/$1",
+      "@src/(.)": "<rootDir>/src/$1"
+    }
+  }
 }
