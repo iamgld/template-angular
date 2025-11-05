@@ -68,16 +68,6 @@
     "typescript": "5.9.3",
     "typescript-eslint": "8.46.3"
   },
-  "prettier": {
-    "overrides": [
-      {
-        "files": "*.html",
-        "options": {
-          "parser": "angular"
-        }
-      }
-    ]
-  },
   "jest": {
     "preset": "jest-preset-angular",
     "setupFilesAfterEnv": [

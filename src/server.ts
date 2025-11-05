@@ -51,12 +51,13 @@ app.use((req, res, next) => {
  */
 if (isMainModule(import.meta.url)) {
 	const port = process.env['PORT'] || 4000
-	app.listen(port, (error) => {
-		if (error) {
-			throw error
-		}
-
+	const server = app.listen(port, () => {
 		console.log(`Node Express server listening on http://localhost:${port}`)
+	})
+
+	server.on('error', (error) => {
+		console.error('Server error:', error)
+		throw error
 	})
 }
 
