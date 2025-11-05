@@ -107,7 +107,7 @@ Angular — Deliver web apps with confidence 🚀
 - [Creating a component harness for your components](https://angular.dev/guide/testing/creating-component-harnesses)
 
 ## Animations
-- [Animations your content](https://angular.dev/guide/animations/css)
+- [Animating your content](https://angular.dev/guide/animations/css)
 - [Route transition animation](https://angular.dev/guide/animations/route-animations)
 - [Migrating to native CSS animations](https://next.angular.dev/guide/animations/migration)
 
