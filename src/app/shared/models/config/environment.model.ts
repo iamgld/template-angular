@@ -1,11 +1,11 @@
-export interface IEnvironment {
-	environment: EEnvironment
-	production: boolean
+export interface Environment {
+  environmentType: EnvironmentType
+  production: boolean
 }
 
-export enum EEnvironment {
-	production = 'production',
-	staging = 'staging',
-	development = 'development',
-	local = 'local',
+export enum EnvironmentType {
+  production = 'production',
+  staging = 'staging',
+  development = 'development',
+  local = 'local',
 }

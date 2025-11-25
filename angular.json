@@ -1,9 +1,14 @@
 {
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
   "version": 1,
+  "cli": {
+    "packageManager": "pnpm",
+    "analytics": false,
+    "schematicCollections": ["@angular-eslint/schematics"]
+  },
   "newProjectRoot": "projects",
   "projects": {
-    "app": {
+    "angular-template": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:application": {
@@ -30,133 +35,121 @@
       },
       "root": "",
       "sourceRoot": "src",
-      "prefix": "app",
+      "prefix": "gld",
       "architect": {
         "build": {
           "builder": "@angular/build:application",
           "options": {
-            "outputPath": "dist",
-            "index": "src/index.html",
             "browser": "src/main.ts",
+            "tsConfig": "tsconfig.app.json",
+            "inlineStyleLanguage": "scss",
+            "assets": [
+              {
+                "glob": "**/*",
+                "input": "public"
+              }
+            ],
+            "styles": ["src/styles.scss"],
             "server": "src/main.server.ts",
+            "outputMode": "server",
             "ssr": {
               "entry": "src/server.ts"
             },
-            "outputMode": "server",
-            "polyfills": [],
-            "tsConfig": "tsconfig.app.json",
-            "inlineStyleLanguage": "scss",
-            "optimization": {
-              "scripts": true,
-              "styles": {
-                "minify": true,
-                "inlineCritical": true
-              },
-              "fonts": true
-            },
-            "assets": ["src/favicon.ico", "src/assets"],
-            "styles": ["src/index.scss"],
             "stylePreprocessorOptions": {
               "includePaths": ["./src/app/styles"]
             },
-            "scripts": [],
-            "allowedCommonJsDependencies": ["flat"]
+            "scripts": []
           },
           "configurations": {
             "local": {
-              "extractLicenses": false,
               "fileReplacements": [
                 {
                   "replace": "src/environments/environment.local.ts",
                   "with": "src/environments/environment.local.ts"
                 }
               ],
-              "namedChunks": false,
               "optimization": false,
-              "sourceMap": false
+              "extractLicenses": false,
+              "sourceMap": true
             },
             "development": {
-              "extractLicenses": false,
               "fileReplacements": [
                 {
                   "replace": "src/environments/environment.local.ts",
                   "with": "src/environments/environment.development.ts"
                 }
               ],
-              "namedChunks": false,
               "optimization": false,
-              "sourceMap": false
+              "extractLicenses": false,
+              "sourceMap": true
             },
             "staging": {
-              "extractLicenses": false,
               "fileReplacements": [
                 {
                   "replace": "src/environments/environment.local.ts",
                   "with": "src/environments/environment.staging.ts"
                 }
               ],
-              "namedChunks": false,
-              "optimization": false,
-              "sourceMap": false
-            },
-            "production": {
               "budgets": [
                 {
-                  "maximumError": "10mb",
-                  "maximumWarning": "5mb",
-                  "type": "initial"
+                  "type": "initial",
+                  "maximumWarning": "500kB",
+                  "maximumError": "1MB"
                 },
                 {
-                  "maximumError": "400kb",
-                  "maximumWarning": "200kb",
-                  "type": "anyComponentStyle"
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "4kB",
+                  "maximumError": "8kB"
                 }
               ],
+              "outputHashing": "all"
+            },
+            "production": {
               "fileReplacements": [
                 {
                   "replace": "src/environments/environment.local.ts",
                   "with": "src/environments/environment.production.ts"
                 }
               ],
-              "outputHashing": "all",
-              "optimization": true
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "500kB",
+                  "maximumError": "1MB"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "4kB",
+                  "maximumError": "8kB"
+                }
+              ],
+              "outputHashing": "all"
             }
           },
-          "defaultConfiguration": "local"
+          "defaultConfiguration": "production"
         },
         "serve": {
           "builder": "@angular/build:dev-server",
-          "options": {
-            "hmr": true
-          },
           "configurations": {
-            "production": {
-              "buildTarget": "app:build:production"
-            },
-            "staging": {
-              "buildTarget": "app:build:staging"
+            "local": {
+              "buildTarget": "angular-template:build:local"
             },
             "development": {
-              "buildTarget": "app:build:development"
+              "buildTarget": "angular-template:build:development"
             },
-            "local": {
-              "buildTarget": "app:build:local"
+            "staging": {
+              "buildTarget": "angular-template:build:staging"
+            },
+            "production": {
+              "buildTarget": "angular-template:build:production"
             }
           },
           "defaultConfiguration": "local"
         },
-        "lint": {
-          "builder": "@angular-eslint/builder:lint",
-          "options": {
-            "lintFilePatterns": ["src/**/*.ts", "src/**/*.html"]
-          }
+        "test": {
+          "builder": "@angular/build:unit-test"
         }
       }
     }
-  },
-  "cli": {
-    "packageManager": "pnpm",
-    "analytics": false,
-    "schematicCollections": ["@angular-eslint/schematics"]
   }
 }
