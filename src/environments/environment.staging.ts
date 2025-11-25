@@ -1,7 +1,7 @@
 // Shared Imports
-import { IEnvironment, EEnvironment } from '@shared/models'
+import { Environment, EnvironmentType } from '@shared/models'
 
-export const environment: IEnvironment = {
-	environment: EEnvironment.staging,
-	production: false,
+export const environment: Environment = {
+  environmentType: EnvironmentType.staging,
+  production: false,
 }
