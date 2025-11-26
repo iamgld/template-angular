@@ -1,7 +1,7 @@
 {
   "private": true,
   "name": "angular-template",
-  "version": "21.0.0",
+  "version": "21.0.1",
   "author": "Gregory López",
   "homepage": "https://iamgld.dev",
   "packageManager": "pnpm@10.23.0",
