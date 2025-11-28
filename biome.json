@@ -30,7 +30,10 @@
       "bracketSpacing": true
     }
   },
-  "html": { "formatter": { "indentScriptAndStyle": false, "selfCloseVoidElements": "always" } },
+  "html": {
+    "formatter": { "indentScriptAndStyle": false, "selfCloseVoidElements": "always" },
+    "parser": { "interpolation": true }
+  },
   "overrides": [
     {
       "includes": ["**/*.ts"],
@@ -118,5 +121,5 @@
       "linter": { "enabled": false }
     }
   ],
-  "assist": { "enabled": true, "actions": { "source": { "organizeImports": "on" } } }
+  "assist": { "enabled": true, "actions": { "source": { "organizeImports": "off" } } }
 }
